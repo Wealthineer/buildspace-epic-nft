@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -24,5 +25,8 @@ module.exports = {
       url: process.env.ALCHEMY_RINKEBY_HTTP_URL,
       accounts: [`0x${process.env.PK_DEV1}`]
     }
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY
   }
 };
